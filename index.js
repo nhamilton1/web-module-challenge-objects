@@ -62,8 +62,9 @@ const burger = {
   // refer to the top of the notes
   discount: function (string){
 if(string === 'teacher' || string === 'student'){
-  
-}
+  return price/.25;
+} else (string === 'public')
+  return price/.10
   }
 }
 
