@@ -23,6 +23,13 @@ function createMenuItem(typeOfFood, priceOfFood, categoryOfFood){
     }
     return food;
 }
+
+// function createMenuItem(name, price, category){
+//   return {name, price, category};
+// } also works
+
+
+
 // console.log('task 1a',createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -68,7 +75,16 @@ if(string === 'teacher' || string === 'student'){
   }
 }
 
-// console.log(burger.price)
+
+// discount: function(person){
+//   if (person === 'teacher' || person === 'student'){
+//     return this.price - (this.price * 0.25);
+//   } else if (person === 'public'){
+//     return this.price - (this.price * 0.10);
+//   }
+// }
+
+// console.log(burger.discount('teacher'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -85,7 +101,9 @@ const reviews = [
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
-*/
+
+  
+
 
 // console.log('task 3',reviews[5].feedback)
 
@@ -153,6 +171,7 @@ function getLastReview(array) {
   return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`
 } 
 
+
 // console.log('task 7',reviews)
 // `${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: ${this.feedback}`
 // return array.length -1;
@@ -184,7 +203,7 @@ Use the getReviewsByRating function below to do the following:
   }
 
 
-console.log('stretch 1:',getReviewByIndex(reviews, 4));
+// console.log('stretch 1:',getReviewByIndex(reviews, 4));
 
 // const myRating = [];
 // for(let i = 0; i < arrays.length; i++){
@@ -249,7 +268,7 @@ function carMaker(distance) {
     return objectName.drive(distance);
 }
 
-console.log('Stretch 3:',carMaker(100));
+// console.log('Stretch 3:',carMaker(100));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
