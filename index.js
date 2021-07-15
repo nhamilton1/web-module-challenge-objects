@@ -23,7 +23,7 @@ function createMenuItem(typeOfFood, priceOfFood, categoryOfFood){
     }
     return food;
 }
-console.log('task 1a',createMenuItem('tacos', 8, 'Lunch'));
+// console.log('task 1a',createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -39,9 +39,9 @@ function createNewMenuItem(typeOfFood, priceOfFood, categoryOfFood){
   return {typeOfFood, priceOfFood, categoryOfFood};
 }
 
-console.log('task 1b', createMenuItem("pizza",5,"lunch"))
-console.log('task 1c', createMenuItem("Sushi",11,"anytime"))
-console.log('task 1d', createMenuItem("dumpling",5,"dinner"))
+// console.log('task 1b', createMenuItem("pizza",5,"lunch"))
+// console.log('task 1c', createMenuItem("Sushi",11,"anytime"))
+// console.log('task 1d', createMenuItem("dumpling",5,"dinner"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -95,7 +95,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-// console.log('task 4', reviews);
+// console.log('task 4', reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';);
 
 
 
@@ -110,7 +110,7 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  array.push({name: name, rating: rating, feedback: feedback})
+  array.push({name, rating, feedback})
   return array;
 }
 
@@ -133,7 +133,7 @@ function getReviewByIndex(array, index) {
 // = this.name + ' gave the restaurant a ' + this.rating + ' star review, and their feedback was:' + this.feedback;
 // return array[index] = (`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: ${this.feedback}`);
 // for (let i = 0; i < array.length; i++)
-console.log('task 6',getReviewByIndex(reviews,0));
+// console.log('task 6',getReviewByIndex(reviews,0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -173,11 +173,27 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, rating) {
+   const reviewRange = [];
+   for(let i = 0; i < array.length; i++){
+     if (Math.floor(array[i].rating) === Math.floor(rating)){
+       reviewRange.push(array[i]);
+     }
+   }
+   return reviewRange
   }
 
-  
+
+console.log('stretch 1:',getReviewByIndex(reviews, 4));
+
+// const myRating = [];
+// for(let i = 0; i < arrays.length; i++){
+//   if(array[i].rating >= rating && array[i].rating < rating + 1){
+//     myRating.push(array[i]);
+//   }
+// }
+// return myRating 
+
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
@@ -191,10 +207,18 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+    const reviewList = [];
+    for (let i = 0; i <array.length; i++){
+      if (array[i].feedback.split(" ").length > 15){
+        reviewList.push(array[i]);
+      }
+    }
+    return reviewList;
   }
   
+
+  // console.log('stretch 2:', getLongReviews(reviews))
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -214,11 +238,18 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(distance) {
+
+    let objectName = {
+      odometer: 10,
+      drive: function(distance) {
+        return this.odometer + distance
+      }
+    }
+    return objectName.drive(distance);
 }
 
+console.log('Stretch 3:',carMaker(100));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
