@@ -61,9 +61,8 @@ const burger = {
   category: "Lunch", 
   // refer to the top of the notes
   discount: function (string){
-//if the string is the teacher, what is the discount //if string is the student, what is the discount // and public
 if(string === 'teacher' || string === 'student'){
-   this.price
+  
 }
   }
 }
@@ -109,8 +108,8 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(array, index, rate, string){
-  array[index][rate] = string;
+function addReview(array, name, rating, feedback){
+  array.push({name: name, rating: rating, feedback: feedback})
   return array;
 }
 
@@ -125,11 +124,14 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  for (let i = 0; i < array.length; i++){
+    array[i]
+  }
+  return `${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: ${this.feedback}` ;
 }
 
-
+// console.log(getReviewByIndex(reviews,0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
